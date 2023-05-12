@@ -1,12 +1,13 @@
 from flask import Flask, jsonify
 import os
+import sys
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-    return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
+    return jsonify({"Choo Choo": f"Welcome to your Flask app, python version: {sys.version}"})
 
 
 if __name__ == '__main__':
