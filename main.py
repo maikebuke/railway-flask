@@ -14,7 +14,7 @@ def index():
                     "time": str(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))})
 
 
-@app.route("test")
+@app.route("/test")
 def test():
     resp = requests.get("https://api.openai.com/v1/chat/completions")
     return resp
