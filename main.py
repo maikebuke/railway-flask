@@ -17,7 +17,7 @@ def index():
 @app.route("/test")
 def test():
     resp = requests.get("https://api.openai.com/v1/chat/completions")
-    return resp
+    return resp.json()
 
 if __name__ == '__main__':
     app.run(debug=True, port=os.getenv("PORT", default=5000))
